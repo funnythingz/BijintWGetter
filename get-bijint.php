@@ -36,7 +36,6 @@ class BijintWGetter {
         }
 
         foreach($commandList as $value) {
-            var_dump($value);
             shell_exec($value);
         }
 
