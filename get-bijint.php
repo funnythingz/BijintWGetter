@@ -44,6 +44,6 @@ class BijintWGetter {
 
 }
 
-#BijintWGetter::getBijintAll('jp');
-BijintWGetter::getBijintAll('cc');
-BijintWGetter::getBijintAll('niigata');
+BijintWGetter::getBijintAll('jp');
+#BijintWGetter::getBijintAll('cc');
+#BijintWGetter::getBijintAll('niigata');
