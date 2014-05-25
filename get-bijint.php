@@ -4,9 +4,9 @@ date_default_timezone_set('UTC');
 
 class BijintWGetter {
 
-    static public function getBijintAll() {
+    static public function getBijintAll($type) {
 
-        $dirname = date('Ymd');
+        $dirname = date('Ymd') . '_' . $type;
 
         shell_exec('mkdir ' . $dirname);
 
@@ -29,7 +29,7 @@ class BijintWGetter {
                     }
                 }
 
-                $command = 'wget http://www.bijint.com/jp/tokei_images/' . $filename . ' -P ' . __DIR__ . '/' . $dirname . '/';
+                $command = 'wget http://www.bijint.com/' . $type . '/tokei_images/' . $filename . ' -P ' . __DIR__ . '/' . $dirname . '/';
                 array_push($commandList, $command);
 
             }
@@ -44,4 +44,6 @@ class BijintWGetter {
 
 }
 
-BijintWGetter::getBijintAll();
+#BijintWGetter::getBijintAll('jp');
+BijintWGetter::getBijintAll('cc');
+BijintWGetter::getBijintAll('niigata');
